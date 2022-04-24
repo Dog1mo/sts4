@@ -6,7 +6,7 @@
 	<artifactId>webprj</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	
+
 	<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-api -->
 	<dependencies>
 		<dependency>
@@ -14,7 +14,14 @@
 			<artifactId>tomcat-api</artifactId>
 			<version>8.5.77</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>5.3.19</version>
+		</dependency>
 	</dependencies>
+
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
