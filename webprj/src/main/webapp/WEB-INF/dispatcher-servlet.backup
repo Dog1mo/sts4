@@ -9,6 +9,7 @@
 
 	<bean name="/index"
 		class="com.newlecture.web.controller.indexController" />
+		
 	<bean name="/notice/list"
 		class="com.newlecture.web.controller.notice.ListController" >
 		<property name="noticeService" ref="noticeService" />
@@ -16,6 +17,8 @@
 		
 	<bean name="/notice/detail"
 		class="com.newlecture.web.controller.notice.DetailController" />
+		
+		
 
 	<bean
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
