@@ -1,13 +1,12 @@
 package com.newlecture.web.controller.api;
 
 import java.sql.SQLException;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.newlecture.web.entity.Notice;
 import com.newlecture.web.service.NoticeService;
 
 @RestController("apiNoticeController")
@@ -18,11 +17,14 @@ public class NoticeController {
 	private NoticeService service;
 	
 	@RequestMapping("list")
-	public Notice list() throws ClassNotFoundException, SQLException {
+	public String list(@RequestParam(name="p", defaultValue = "1") Integer page) throws ClassNotFoundException, SQLException {
 		
-		List<Notice> list = service.getList(1, "title", "");
+		//String p = request.getParameter("p");
 		
-		return list.get(0);
+		
+		//List<Notice> list = service.getList(1, "title", "");
+		
+		return "notice.list";
 	}
 
 }
